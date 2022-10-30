@@ -10,6 +10,10 @@ const CardComponent = (props) => {
             </div>
             <div className="ticket-content">
               <div className="ticket-info">
+                <span className="info">Train Name: </span> :{" "}
+                <span>{props.allTicket.trainName}</span>
+              </div>
+              <div className="ticket-info">
                 <span className="info">Date of Journey</span> :{" "}
                 <span>{props.allTicket.date}</span>
               </div>
@@ -20,9 +24,6 @@ const CardComponent = (props) => {
               <div className="ticket-info">
                 <span className="info">Ticket Class</span> :{"  "}
                 <span>{props.allTicket.ticketClass}</span>
-              </div>
-              <div className="ticket-info">
-                <span className="info">Number of Seats</span> : <span>{1}</span>
               </div>
             </div>
             <div className="toggle-button">

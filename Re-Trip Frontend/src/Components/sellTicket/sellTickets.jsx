@@ -27,6 +27,7 @@ const SellTicketComp = () => {
                     ticketClass: "",
                     coachNo: "",
                     fare: "",
+                    postedBy: "",
                   }}
                   onSubmit={(values, actions) => {
                     const data = {
@@ -38,8 +39,8 @@ const SellTicketComp = () => {
                       ticketClass: values.ticketClass,
                       coachNo: values.coachNo,
                       seatNo: "Buy it First ",
-                      fare: values.fare
-
+                      fare: values.fare,
+                      postedBy: "some user"
                     };
                     handleSubmit(data);
                     actions.setSubmitting(false);
