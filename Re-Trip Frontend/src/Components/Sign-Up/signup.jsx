@@ -3,6 +3,7 @@ import "../../Styles/Authentication/signUp.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import signUpSchema from '../schemas/signUp'
 import { signUpUser } from "../../APIs/rest";
+
 const SignUpComponent = () => {
   const handleSubmit = (data) => {
     signUpUser(data);
@@ -100,7 +101,10 @@ const SignUpComponent = () => {
                             <ErrorMessage name="password" />
                           </div>
                         </div>
-                        <button className="auth-btn" type="submit">
+                        <button 
+                          className="auth-btn" 
+                          type="submit"
+                          name="save">
                           Sign Up
                         </button>
                       </div>

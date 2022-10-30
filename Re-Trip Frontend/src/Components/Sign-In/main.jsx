@@ -4,6 +4,7 @@ import "../../Styles/Authentication/signIn.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import signInSchema from '../schemas/signIn'
 import {signInUser} from '../../APIs/rest'
+
 const SignInComponent = () => {
     const handleSubmit = (data) => {
       signInUser(data);
@@ -27,7 +28,7 @@ const SignInComponent = () => {
                   onSubmit={(values, actions) => {
                     const data = {
                       email: values.email,
-                      password: values.password,
+                      password: values.password
                     };
                     handleSubmit(data);
                     actions.setSubmitting(false);

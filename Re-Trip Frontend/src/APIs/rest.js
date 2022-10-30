@@ -20,8 +20,25 @@ export async function signUpUser(data) {
     console.log(response);
     if ((response.status = 200)) {
       toast.success("Sign Up Successfull");
-    window.location.href = "/sign-in";
+      window.location.href = "/sign-in";
+    }
+    else{
+        toast.error(response.data);
 
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function newTicket(data) {
+  
+  try {
+    const response = await axios.post(apiEndpoints.newTicket, data);
+    console.log(response);
+    if ((response.status = 200)) {
+      toast.success("Ticket Posting Successfull");
+    //window.location.href = "/sign-in";
     }
     else{
         toast.error(response.data);

@@ -36,7 +36,7 @@ app.use(helmet());
 //defining all routes 
 
 app.use('/sign-up',userSignUp)
-app.use('/log-in',userSignIn)
+app.use('/sign-in',userSignIn)
 app.use('/new-ticket',newTicket)
 app.use("/get-tickets", allActiveTickets);
 app.use("/get-ticket",passport.authenticate("jwt",{session: false}), getTicketById);

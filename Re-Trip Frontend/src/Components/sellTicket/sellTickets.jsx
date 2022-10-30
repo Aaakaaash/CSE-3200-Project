@@ -1,9 +1,12 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import newTicketSchema from '../schemas/newTicketSchema'
 import "../../Styles/SellTicket/sellTickets.css";
+import {newTicket} from '../../APIs/rest'
+
 
 const SellTicketComp = () => {
   const handleSubmit =(data)=>{
+      newTicket(data);
       console.log(data);
   }
   return (
@@ -16,8 +19,8 @@ const SellTicketComp = () => {
               <div className="">
                 <Formik
                   initialValues={{
-                    fromStation: "",
-                    toStation: "",
+                    from: "",
+                    to: "",
                     date: "",
                     time: "",
                     trainName: "",
@@ -27,15 +30,15 @@ const SellTicketComp = () => {
                   }}
                   onSubmit={(values, actions) => {
                     const data = {
-                      from: values.fromStation,
-                      to: values.toStation,
+                      from: values.from,
+                      to: values.to,
                       date: values.date,
                       time: values.time,
                       trainName: values.trainName,
                       ticketClass: values.ticketClass,
                       coachNo: values.coachNo,
-                       seatNo: "Buy it First ",
-                      fare: values.fare,
+                      seatNo: "Buy it First ",
+                      fare: values.fare
 
                     };
                     handleSubmit(data);
@@ -49,26 +52,26 @@ const SellTicketComp = () => {
                         <div className="input-cell">
                           <div className="before-field">
                             <Field
-                              name="fromStation"
-                              id="fromStation"
+                              name="from"
+                              id="from"
                               type="text"
                               placeholder="From Station"
                               className="input-field"
                             />
                             <div className="error-message">
-                              <ErrorMessage name="fromStation" />
+                              <ErrorMessage name="from" />
                             </div>
                           </div>
                           <div className="before-field">
                             <Field
-                              name="toStation"
-                              id="toStation"
+                              name="to"
+                              id="to"
                               type="text"
                               placeholder="To Station"
                               className="input-field"
                             />
                             <div className="error-message">
-                              <ErrorMessage name="toStation" />
+                              <ErrorMessage name="to" />
                             </div>
                           </div>
                         </div>
@@ -155,7 +158,7 @@ const SellTicketComp = () => {
                             className="submit-button"
                             type="submit"
                             name="save">
-                            Submit
+                            Post to Sell
                           </button>
                         </div>
                       </Form>
