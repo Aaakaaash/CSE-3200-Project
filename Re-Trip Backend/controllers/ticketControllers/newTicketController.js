@@ -1,6 +1,6 @@
 const newTicket = require('../../models/tickets/newTicket')
 
-exports.newTicket = async(req,res) =>{
+exports.newTicket = async(req, res) =>{
     const {
       from,
       to,
@@ -13,7 +13,7 @@ exports.newTicket = async(req,res) =>{
       fare,
       postedBy,
     } = req.body;
-    console.log("infos",req.body)
+    console.log("infos", req.body);
     const addNewTicket = new newTicket({
       from,
       to,
@@ -27,8 +27,8 @@ exports.newTicket = async(req,res) =>{
       postedBy
     });
     const saveNewTicket = await addNewTicket.save().catch((err)=>{
-        console.log("Some Error Occured in Saving Ticket",err)
-        res.json({message: "Some Problems Occured in Creating New Ticket"})
+        console.log("Some Error Occured in Saving Ticket",err);
+        res.json({message: "Problems Occured in Creating New Ticket"});
     })
     if (saveNewTicket){
         res.json({message: "Ticket Post Successfull"})

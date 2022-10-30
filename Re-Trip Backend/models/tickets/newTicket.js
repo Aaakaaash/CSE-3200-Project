@@ -17,11 +17,11 @@ const newTicket = sequelize.define("newTicket", {
     allowNull: false,
   },
   date: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   time: {
-    type: DataTypes.TIME,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   trainName: {
@@ -53,7 +53,7 @@ const newTicket = sequelize.define("newTicket", {
   postedBy: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
+  }
 });
 
 module.exports = newTicket;

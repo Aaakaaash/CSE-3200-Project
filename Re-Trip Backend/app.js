@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require("cors")
 const helmet = require("helmet")
 const morgan = require("morgan")
+
 //importing database config
 require('./config/database')
 require("dotenv").config();
@@ -11,11 +12,9 @@ require("dotenv").config();
 require("./controllers/passport/passport")
 
 //importing passport for authentication 
-
 const passport = require('passport')
 
 //importing all routes 
-
 const userSignUp = require("./routes/authentication/signUp")
 const userSignIn = require('./routes/authentication/signin')
 const newTicket = require('./routes/tickets/newTicket')
@@ -37,7 +36,7 @@ app.use(helmet());
 //defining all routes 
 
 app.use('/sign-up',userSignUp)
-app.use('/sign-in',userSignIn)
+app.use('/log-in',userSignIn)
 app.use('/new-ticket',newTicket)
 app.use("/get-tickets", allActiveTickets);
 app.use("/get-ticket",passport.authenticate("jwt",{session: false}), getTicketById);

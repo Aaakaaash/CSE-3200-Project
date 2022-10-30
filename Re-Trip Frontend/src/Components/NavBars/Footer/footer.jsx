@@ -21,13 +21,7 @@ const Footer = () => {
         <FaPinterest className="icon" />
       </div>
       <div className="container">
-        <div className="col">
-          <h3>About</h3>
-          <p>Company</p>
-          <p>Details</p>
-          <p>Planning</p>
-          <p>About Us</p>
-        </div>
+        
         <div className="col">
           <h3>Company</h3>
           <p>Company</p>

@@ -1,4 +1,4 @@
-.hero {
+	.hero {
     background-color: rgba(0,0,0,.5);
     color: #fff;
     height: 1500px;
@@ -23,13 +23,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 700px;
+    max-width: 500px;
     padding: 1rem;
 }
 
 
 
 .main{
+	xborder: #000 5px solid;
 	width: 400px;
 	height: 800px !important;
 	background: red;
@@ -87,13 +88,15 @@ label{
 	background: #6d44b8;
 }
 .login{
-	height: 200px;
-	background: #eee;
-	border-radius: 60% / 10%;
-	transform: translateY(-180px);
-	transition: .8s ease-in-out;
+	xborder: #000 5px solid;
+	xheight: 60px;
+	background: rgb(32, 29, 29);
+	xborder-radius: 60% / 10%;
+	xtransform: translateY(-180px);
+	xtransition: .8s ease-in-out;
 }
 .login label{
+	font-size: larger;
 	color: #573b8a;
 	transform: scale(.6);
 }

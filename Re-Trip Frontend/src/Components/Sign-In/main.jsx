@@ -54,7 +54,7 @@ const SignInComponent = () => {
                               name="password"
                               id="password"
                               type="password"
-                              placeholder="NID Number"
+                              placeholder="Password"
                               className=""
                             />
                             <div className="error-message">
@@ -62,7 +62,7 @@ const SignInComponent = () => {
                             </div>
                           </div>
                           <button className="auth-btn" type="submit">
-                            Sign Up
+                            Sign In
                           </button>
                         </div>
                       </Form>
@@ -75,7 +75,7 @@ const SignInComponent = () => {
               <div className="login">
                 <div>
                   <label for="chk" aria-hidden="true">
-                    Sign Up
+                    Sign Up Instead
                   </label>
                 </div>
               </div>

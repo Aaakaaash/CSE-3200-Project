@@ -2,6 +2,7 @@ import axios from "axios";
 import { apiEndpoints } from "./endpoints";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 export async function getAllTickets() {
   try {
     const data = await axios.get(apiEndpoints.getAllActiveTickets);

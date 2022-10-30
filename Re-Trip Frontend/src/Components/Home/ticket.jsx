@@ -16,15 +16,7 @@ function TicketSection() {
       <div className="best">
         <h1>
           <span>Find Your Tickets</span>
-        </h1>
-        <div className="attributes">
-          <p>
-            <span className="bold">All</span>
-          </p>
-          <p>Train</p>
-          <p>Bus</p>
-          <p>Air</p>
-        </div>
+        </h1><br></br>
       </div>
       <div className="ticket-cards">
         {allTickets.map((allTicket,index) => {

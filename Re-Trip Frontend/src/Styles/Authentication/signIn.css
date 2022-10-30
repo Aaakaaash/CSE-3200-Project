@@ -91,13 +91,14 @@ input{
 	background: #6d44b8;
 }
 .login{
-	height: 600px;
+	height: 400px;
 	background: #eee;
 	border-radius: 50% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
+	font-size: larger;
 	color: #573b8a;
 	transform: scale(.6);
 }

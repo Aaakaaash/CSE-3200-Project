@@ -93,7 +93,7 @@ const SignUpComponent = () => {
                             name="password"
                             id="password"
                             type="password"
-                            placeholder="NID Number"
+                            placeholder="password"
                             className=""
                           />
                           <div className="error-message">
@@ -101,7 +101,7 @@ const SignUpComponent = () => {
                           </div>
                         </div>
                         <button className="auth-btn" type="submit">
-                          Sign In
+                          Sign Up
                         </button>
                       </div>
                     </Form>
@@ -114,7 +114,7 @@ const SignUpComponent = () => {
               <div className="login">
                 <div>
                   <label for="chk" aria-hidden="true">
-                    Sign In
+                    Sign In Instead
                   </label>
                 </div>
               </div>

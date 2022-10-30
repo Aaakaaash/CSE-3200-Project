@@ -1,6 +1,8 @@
 import { string, object, number, date, time } from "yup";
 import * as Yup from "yup";
 
+
+//using yup for data constrains
 const signInSchema = object().shape({
   email: string()
     .min(15, "This field must be at least 15 characters long")

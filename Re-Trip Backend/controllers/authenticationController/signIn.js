@@ -2,7 +2,10 @@ const userSignup = require('../../models/auth/signup')
 const userSignIn = require('../../models/auth/signin')
 const jwt = require("jsonwebtoken");
 exports.userSignInController = async(req,res) =>{
-   const {email,password} = req.body
+   const {
+    email,
+    password} = req.body
+
    const userExist = await userSignup
      .findOne({ where: { email } })
      .catch((err) => {
